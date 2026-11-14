@@ -66,3 +66,7 @@ macOS 或 Linux 使用 `python3.12 -m venv .venv` 创建环境，将后续命令
 哪一步卡住了？你们办公室有更顺的做法？欢迎在 [Issues](https://github.com/pupprise/Material-Dock/issues) 说说你原本想完成什么、页面实际发生了什么。附上脱敏截图或样例 Excel 更容易一起排查。
 
 也欢迎 fork 后提交 commit，再开 [Pull Request](https://github.com/pupprise/Material-Dock/pulls)。改清一句说明、补一个导入测试、少让材料员点一次按钮，都算有价值的改动。顺手说说改动解决了哪个问题就好。
+
+## 许可
+
+项目代码和文档采用 [MIT 许可证](LICENSE)。随仓库分发的 Tabler 图标保留其[原始许可和版权声明](web/icons/LICENSE.txt)。

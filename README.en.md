@@ -50,3 +50,7 @@ The [Chinese documentation index](README.md#各板块文档) covers accounts, th
 Where did you get stuck? How does your team handle the same job? Share what you expected and what happened in [Issues](https://github.com/pupprise/Material-Dock/issues). Please use redacted screenshots and sample workbooks.
 
 If you want to make a change, fork the repo, make a commit, and open a [Pull Request](https://github.com/pupprise/Material-Dock/pulls). Clearer instructions, an import regression test, and small workflow fixes are all welcome. A sentence about the problem your change solves goes a long way.
+
+## License
+
+The project code and documentation are available under the [MIT License](LICENSE). Bundled Tabler icons retain their [original license and copyright notice](web/icons/LICENSE.txt).
