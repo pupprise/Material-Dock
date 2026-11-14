@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="dock-release" content="0.5.1">
+  <title>Material Dock · 内网试用</title>
+  <link rel="stylesheet" href="/app.css?v=0.5.1">
+  <script src="/supplier-ui.js?v=0.5.1" defer></script>
+  <script src="/app.js?v=0.5.1" defer></script>
+</head>
+<body>
+  <aside id="release-notice" class="release-notice" aria-live="polite" hidden>
+    <span id="release-message"></span>
+    <button class="button" type="button" id="reload-release">刷新到新版</button>
+  </aside>
+  <svg class="icon-sprite" width="0" height="0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="fabric" viewBox="0 0 24 24"><path d="m3 8 9-5 9 5-9 5-9-5Zm0 4 9 5 9-5M3 16l9 5 9-5"/></symbol>
+    <symbol id="queue" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M10 9v11"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 5-2 6-2 8h16c0-2-2-3-2-8M10 20h4"/></symbol>
+  </svg>
+  <main id="login" class="login-shell">
+    <form id="login-form" class="login-card">
+      <div class="brand"><span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#fabric"></use></svg></span>Material Dock</div>
+      <h1>个人账号登录</h1>
+      <p id="login-invite" class="login-invite" hidden></p>
+      <p id="public-login-help" class="muted" hidden>浏览器弹窗按分发说明填网关用户名和公网密钥。此处填你的姓名和 Dock 密码。</p>
+      <label>姓名<input name="name" required maxlength="40" autocomplete="username"></label>
+      <label>密码<input name="password" type="password" required maxlength="64" autocomplete="current-password"></label>
+      <label class="tag-option"><input name="rememberDevice" type="checkbox">记住这台个人设备 30 天</label>
+      <button class="primary" type="submit">进入工作台</button>
+      <button class="quiet" type="button" id="forgot-password">忘记密码</button>
+      <p id="login-error" class="error" role="alert"></p>
+    </form>
+  </main>
+  <main id="workspace" class="workspace" hidden></main>
+  <dialog id="action-dialog">
+    <form id="action-form">
+      <div class="dialog-heading"><h2 id="action-title"></h2><button class="quiet" type="button" data-action="close" aria-label="关闭">关闭</button></div>
+      <div id="action-fields"></div>
+      <p id="action-error" class="error" role="alert"></p>
+      <div class="dialog-footer"><button class="quiet" type="button" data-action="close">取消</button><button class="primary" type="submit" id="action-submit">保存</button></div>
+    </form>
+  </dialog>
+  <dialog id="account-dialog" aria-labelledby="account-title">
+    <form id="account-form">
+      <div class="dialog-heading"><h2 id="account-title"></h2><button class="quiet" type="button" id="account-close">关闭</button></div>
+      <p id="account-help" class="muted"></p>
+      <div id="account-fields"></div>
+      <p id="account-error" class="error" role="alert"></p>
+      <div class="dialog-footer"><button class="primary" type="submit" id="account-submit">保存</button></div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
