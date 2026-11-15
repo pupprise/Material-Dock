@@ -2,6 +2,10 @@
 
 [English](README.en.md)
 
+服装打样团队的面辅料跟单台。把 Excel/WPS 里的带图需求交给材料员，在同一个工作台追交期、登记实收。
+
+[快速试用](#本地试用) · [下载带图样表（XLSX）](https://github.com/pupprise/Material-Dock/releases/download/v0.5.1/material-dock-demo.xlsx) · [观看流程演示（MP4）](https://github.com/pupprise/Material-Dock/releases/download/v0.5.1/material-dock-demo.mp4) · [v0.5.1 发布说明](https://github.com/pupprise/Material-Dock/releases/tag/v0.5.1)
+
 ## 🧵 这条拉链什么时候到？
 
 设计师把需求表发出去了，接下来还得确认数量有没有改、厂家答应哪天到、Excel 里的参考图对应哪一行。材料员这边，同一项目的几条物料都回了交期，能不能一起更新？
@@ -30,14 +34,12 @@ Material Dock 从这些问题长出来。最初是服装设计师用办公室表
 ```powershell
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m pip check
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.venv\Scripts\python.exe demo.py designer
 ```
 
 macOS 或 Linux 使用 `python3.12 -m venv .venv` 创建环境，将后续命令中的 Python 路径换成 `.venv/bin/python`。
 
-第一次启动自动生成独立演示库和随机初始密码，密码保存在 `demo-data/样例1-登录密码.txt`。三个演示入口共用样例数据。
+第一次启动会创建独立演示库。三个演示账号共用同一个随机初始密码，保存在 `demo-data/样例1-登录密码.txt`，三个入口共用样例数据。打开设计师演示后，在「新建需求」上传[带图样表](https://github.com/pupprise/Material-Dock/releases/download/v0.5.1/material-dock-demo.xlsx)，就能在预览里核对参考图和物料行。
 
 | 入口 | 命令参数 | 账号 |
 | --- | --- | --- |
@@ -66,6 +68,10 @@ macOS 或 Linux 使用 `python3.12 -m venv .venv` 创建环境，将后续命令
 哪一步卡住了？你们办公室有更顺的做法？欢迎在 [Issues](https://github.com/pupprise/Material-Dock/issues) 说说你原本想完成什么、页面实际发生了什么。附上脱敏截图或样例 Excel 更容易一起排查。
 
 也欢迎 fork 后提交 commit，再开 [Pull Request](https://github.com/pupprise/Material-Dock/pulls)。改清一句说明、补一个导入测试、少让材料员点一次按钮，都算有价值的改动。顺手说说改动解决了哪个问题就好。
+
+## 致谢
+
+项目由 [pupprise](https://github.com/pupprise) 发起和维护，开发过程中使用 [OpenAI Codex](https://openai.com/codex/) 协助编写代码。
 
 ## 许可
 

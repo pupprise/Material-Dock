@@ -2,6 +2,10 @@
 
 [简体中文](README.md)
 
+A self-hosted material request and delivery tracker for apparel sampling teams. Import requests with embedded images from Excel or WPS, then track expected dates and receipts in one workspace.
+
+[Quick start](#run-locally) · [Sample workbook (XLSX)](https://github.com/pupprise/Material-Dock/releases/download/v0.5.1/material-dock-demo.xlsx) · [Walkthrough (MP4)](https://github.com/pupprise/Material-Dock/releases/download/v0.5.1/material-dock-demo.mp4) · [v0.5.1 release notes](https://github.com/pupprise/Material-Dock/releases/tag/v0.5.1)
+
 ## 🧵 When is that zipper arriving?
 
 A designer sends a spreadsheet and still needs a few answers. Did the quantity change? When did the supplier say it would arrive? Which row did that reference photo belong to? Meanwhile, the materials coordinator has several delivery dates to record for the same project.
@@ -30,14 +34,12 @@ Use Python 3.12. From the repository root on Windows:
 ```powershell
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m pip check
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.venv\Scripts\python.exe demo.py designer
 ```
 
 On macOS and Linux, use `python3.12 -m venv .venv` followed by `.venv/bin/python` in the remaining commands.
 
-The demo binds to loopback and generates a random initial password in `demo-data/样例1-登录密码.txt`. Use `demo.py designer` for 样例1, `demo.py materials` for 样例3, and `demo.py other` for 样例2. The Windows launchers provide the same three entry points. Use separate browser profiles to view accounts simultaneously. Append `--no-browser` for scripted checks.
+The demo binds to loopback. All three demo accounts use the same randomly generated initial password in `demo-data/样例1-登录密码.txt`. Use `demo.py designer` for 样例1, `demo.py materials` for 样例3, and `demo.py other` for 样例2. The Windows launchers provide the same three entry points. Use separate browser profiles to view accounts simultaneously. Append `--no-browser` for scripted checks. In the designer demo, open 「新建需求」 (New request) and upload the [sample workbook](https://github.com/pupprise/Material-Dock/releases/download/v0.5.1/material-dock-demo.xlsx) to preview the reference images beside their rows.
 
 ## Operations
 
@@ -50,6 +52,10 @@ The [Chinese documentation index](README.md#各板块文档) covers accounts, th
 Where did you get stuck? How does your team handle the same job? Share what you expected and what happened in [Issues](https://github.com/pupprise/Material-Dock/issues). Please use redacted screenshots and sample workbooks.
 
 If you want to make a change, fork the repo, make a commit, and open a [Pull Request](https://github.com/pupprise/Material-Dock/pulls). Clearer instructions, an import regression test, and small workflow fixes are all welcome. A sentence about the problem your change solves goes a long way.
+
+## Acknowledgments
+
+[pupprise](https://github.com/pupprise) started and maintains Material Dock. [OpenAI Codex](https://openai.com/codex/) assisted with writing code during development.
 
 ## License
 
